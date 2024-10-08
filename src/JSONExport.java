@@ -19,12 +19,13 @@ public class JSONExport implements Export {
             System.out.println("   \"Ablaufdatum\": " + date+",");
             System.out.println("   \"Kategorienummer\": " + artikel.getKategorienummer());
 
-
+            i++;
             if(i<list.size()){
-                System.out.println(" }");
-            }else {
                 System.out.println(" },");
-                i++;
+
+            }else if (i==list.size()){
+                System.out.println(" }");
+
             }
 
         }

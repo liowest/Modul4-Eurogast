@@ -17,13 +17,16 @@ public class App {
 			switch(parameter)
 			{
 			case "CSV":
-				//CSV-Export durchf?hren
+				CSVExport csv = new CSVExport();
+				csv.export(al);
 				break;
 			case "JSON":
-				//JSON-Export durchf?hren
+				JSONExport json = new JSONExport();
+				json.export(al);
 				break;
 			default:
-				//CSV-Export durchf?hren
+				CSVExport csvExport = new CSVExport();
+				csvExport.export(al);
 				break;
 			}
 		} else //kein Parameter, dann CSV-Export (Standard)

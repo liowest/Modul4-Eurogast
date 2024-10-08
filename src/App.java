@@ -31,7 +31,10 @@ public class App {
 			}
 		} else //kein Parameter, dann CSV-Export (Standard)
 		{
-			//CSV-Export
+
+			CSVExport csvExport = new CSVExport();
+			csvExport.export(al);
+
 		}
 	}
 
